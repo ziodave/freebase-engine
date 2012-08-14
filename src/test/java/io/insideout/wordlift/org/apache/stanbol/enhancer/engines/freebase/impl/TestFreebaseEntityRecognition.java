@@ -11,12 +11,11 @@ public class TestFreebaseEntityRecognition {
     @Test
     public void test() {
 
-        FreebaseEntityRecognition entityRecognition = new FreebaseEntityRecognition();
-        Collection<FreebaseResult> results = entityRecognition.extractEntities("Veronica Lario", "it", true);
+        FreebaseEntityRecognitionImpl entityRecognition = new FreebaseEntityRecognitionImpl();
+        Collection<FreebaseResult> results = entityRecognition.extractEntities("Veronica Lario", "it");
 
         for (FreebaseResult result : results) {
             System.out.println(result.toString());
         }
     }
-
 }

@@ -2,7 +2,7 @@ package io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.impl;
 
 import org.apache.http.client.utils.URIBuilder;
 
-public class FreebaseTopicOptions {
+public class FreebaseTopicOptions extends FreebaseKeyOption {
 
     // see http://wiki.freebase.com/wiki/Topic_API
     private String lang = null;
@@ -10,6 +10,7 @@ public class FreebaseTopicOptions {
     private int limit = 10;
 
     public void addParametersToUriBuilder(URIBuilder uriBuilder) {
+        super.addParametersToUriBuilder(uriBuilder);
 
         if (null != getLang()) uriBuilder.addParameter("lang", getLang());
         if (null != getFilter()) uriBuilder.addParameter("filter", getFilter());

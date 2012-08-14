@@ -2,7 +2,7 @@ package io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.impl;
 
 import org.apache.http.client.utils.URIBuilder;
 
-public class FreebaseSearchOptions {
+public class FreebaseSearchOptions extends FreebaseKeyOption {
 
     // see parameters at:
     // http://wiki.freebase.com/wiki/ApiSearch
@@ -20,6 +20,8 @@ public class FreebaseSearchOptions {
     private String lang = null;
 
     public void addParametersToUriBuilder(URIBuilder uriBuilder) {
+        super.addParametersToUriBuilder(uriBuilder);
+
         if (null != getCallback()) uriBuilder.addParameter("callback", getCallback());
         if (null != getDomain()) uriBuilder.addParameter("domain", getDomain());
 

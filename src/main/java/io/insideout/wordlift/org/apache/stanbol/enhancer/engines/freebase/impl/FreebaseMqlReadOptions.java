@@ -2,7 +2,7 @@ package io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.impl;
 
 import org.apache.http.client.utils.URIBuilder;
 
-public class FreebaseMqlReadOptions {
+public class FreebaseMqlReadOptions extends FreebaseKeyOption {
     // see parameters here:
     // http://wiki.freebase.com/wiki/MQL_Read_Service
 
@@ -16,6 +16,8 @@ public class FreebaseMqlReadOptions {
     private boolean uniquenessFailure = true;
 
     public void addParametersToUriBuilder(URIBuilder uriBuilder) {
+        super.addParametersToUriBuilder(uriBuilder);
+
         if (null != getAsOfTime()) uriBuilder.addParameter("as_of_time", getAsOfTime());
         if (null != getCallback()) uriBuilder.addParameter("callback", getCallback());
         if (null != getCursor()) uriBuilder.addParameter("cursor", getCursor());

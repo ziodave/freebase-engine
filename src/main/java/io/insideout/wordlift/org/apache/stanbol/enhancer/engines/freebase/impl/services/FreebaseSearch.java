@@ -62,6 +62,8 @@ public class FreebaseSearch {
         Gson gson = new Gson();
         FreebaseResponse freebaseResponse = gson.fromJson(responseBody, FreebaseResponse.class);
 
+        if (null == freebaseResponse || null == freebaseResponse.getResult()) return null;
+
         logger.info("Found [{}] result(s).", freebaseResponse.getResult().size());
 
         return freebaseResponse.getResult();
