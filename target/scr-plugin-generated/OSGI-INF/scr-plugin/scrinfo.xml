@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component enabled="true" immediate="true" name="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.impl.FreebaseEntityRecognitionEngine" configuration-policy="require" activate="activate" deactivate="deactivate">
+        <implementation class="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.impl.FreebaseEntityRecognitionEngine"/>
+        <service servicefactory="false">
+            <provide interface="org.apache.stanbol.enhancer.servicesapi.EnhancementEngine"/>
+            <provide interface="org.apache.stanbol.enhancer.servicesapi.ServiceProperties"/>
+        </service>
+        <property name="stanbol.enhancer.engine.name" private="false"/>
+        <property name="service.vendor" type="String" value="Apache Stanbol (incubating)" private="true"/>
+        <property name="service.pid" value="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.impl.FreebaseEntityRecognitionEngine" private="false"/>
+    </scr:component>
+</components>
