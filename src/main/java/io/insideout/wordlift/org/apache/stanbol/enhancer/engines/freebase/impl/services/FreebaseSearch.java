@@ -46,8 +46,6 @@ public class FreebaseSearch {
 
             responseBody = EntityUtils.toString(httpEntity);
 
-            System.out.println(responseBody);
-
         } catch (URISyntaxException e) {
             logger.error("An exception [{}] occured:\n{}", new Object[] {e.getClass(), e.getMessage()}, e);
             throw new RuntimeException(e);

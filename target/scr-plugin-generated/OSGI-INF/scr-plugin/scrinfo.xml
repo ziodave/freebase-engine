@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
-    <scr:component enabled="true" immediate="true" name="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.impl.FreebaseEntityRecognitionImpl">
+    <scr:component enabled="true" immediate="true" name="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.impl.FreebaseEntityRecognitionImpl" configuration-policy="optional" activate="activate" deactivate="deactivate">
         <implementation class="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.impl.FreebaseEntityRecognitionImpl"/>
         <service servicefactory="false">
             <provide interface="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.impl.FreebaseEntityRecognition"/>
         </service>
+        <property name="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.key" private="false"/>
+        <property name="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.search.limit" type="Integer" value="1" private="false"/>
+        <property name="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.search.indent" type="Boolean" value="false" private="false"/>
+        <property name="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.search.score.minimum" type="Double" value="1.0" private="false"/>
         <property name="service.vendor" type="String" value="Apache Stanbol (incubating)" private="true"/>
         <property name="service.pid" value="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.impl.FreebaseEntityRecognitionImpl" private="false"/>
     </scr:component>
@@ -15,9 +19,12 @@
             <provide interface="org.apache.stanbol.enhancer.servicesapi.ServiceProperties"/>
         </service>
         <property name="stanbol.enhancer.engine.name" private="false"/>
+        <property name="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.site.reference.name" type="String" value="dbpedia" private="false"/>
+        <property name="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.search.threads.maximum" type="Integer" value="10" private="false"/>
+        <property name="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.search.timeout.seconds" type="Long" value="60" private="false"/>
+        <property name="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.rdf.uri" type="String" value="http://rdf.freebase.com/ns" private="false"/>
         <property name="service.vendor" type="String" value="Apache Stanbol (incubating)" private="true"/>
         <property name="service.pid" value="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.impl.FreebaseEntityRecognitionEngine" private="false"/>
-        <reference name="entityHub" interface="org.apache.stanbol.entityhub.servicesapi.Entityhub" cardinality="1..1" policy="static" bind="bindEntityHub" unbind="unbindEntityHub" checked="true" strategy="event"/>
         <reference name="siteManager" interface="org.apache.stanbol.entityhub.servicesapi.site.SiteManager" cardinality="1..1" policy="static" bind="bindSiteManager" unbind="unbindSiteManager" checked="true" strategy="event"/>
         <reference name="textAnnotationService" interface="io.insideout.wordlift.org.apache.stanbol.services.TextAnnotationService" cardinality="1..1" policy="static" bind="bindTextAnnotationService" unbind="unbindTextAnnotationService" checked="true" strategy="event"/>
         <reference name="freebaseEntityRecognition" interface="io.insideout.wordlift.org.apache.stanbol.enhancer.engines.freebase.impl.FreebaseEntityRecognition" cardinality="1..1" policy="static" bind="bindFreebaseEntityRecognition" unbind="unbindFreebaseEntityRecognition" checked="true" strategy="event"/>

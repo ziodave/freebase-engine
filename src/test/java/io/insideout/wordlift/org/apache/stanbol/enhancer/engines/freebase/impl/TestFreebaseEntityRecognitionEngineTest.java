@@ -25,7 +25,7 @@ public class TestFreebaseEntityRecognitionEngineTest {
         FreebaseEntityRecognitionImpl entityRecognition = new FreebaseEntityRecognitionImpl();
 
         FreebaseEntityRecognitionEngine engine = new FreebaseEntityRecognitionEngine(site,
-                textAnnotationService, entityRecognition);
+                textAnnotationService, entityRecognition, 10, 60, "http://rdf.freebase.com/ns");
 
         // load the TestTextAnnotations class to get a graph from a test Xml.
         TestTextAnnotations testTextAnnotations = new TestTextAnnotations();

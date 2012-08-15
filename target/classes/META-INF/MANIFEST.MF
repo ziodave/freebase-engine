@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1344974245838
+Bnd-LastModified: 1345025694482
 Build-Jdk: 1.6.0_33
 Built-By: david
 Bundle-ClassPath: .,httpclient-4.2.1.jar,gson-2.2.2.jar
@@ -20,18 +20,18 @@ Export-Package: io.insideout.wordlift.org.apache.stanbol.enhancer.engine
  s.freebase.impl;uses:="org.apache.stanbol.enhancer.servicesapi.rdf,org.
  apache.stanbol.entityhub.servicesapi.model.rdf,org.apache.clerezza.rdf.
  core.access,org.apache.clerezza.rdf.core.impl,org.apache.clerezza.rdf.c
- ore,org.osgi.service.component,org.slf4j,org.apache.stanbol.enhancer.se
+ ore,org.slf4j,org.osgi.service.component,org.apache.stanbol.enhancer.se
  rvicesapi.helper,io.insideout.wordlift.org.apache.stanbol.domain,io.ins
  ideout.wordlift.org.apache.stanbol.services,org.apache.stanbol.enhancer
  .servicesapi.impl,org.apache.stanbol.entityhub.servicesapi.site,org.apa
- che.stanbol.entityhub.servicesapi,org.apache.stanbol.entityhub.services
- api.query,org.apache.stanbol.entityhub.servicesapi.model,org.osgi.servi
- ce.cm,org.apache.stanbol.enhancer.servicesapi,org.apache.stanbol.entity
- hub.model.clerezza";version="1.0.0.SNAPSHOT",io.insideout.wordlift.org.
- apache.stanbol.services;uses:="io.insideout.wordlift.org.apache.stanbol
- .domain,org.apache.stanbol.enhancer.servicesapi,org.apache.clerezza.rdf
- .core";version="1.0.0.SNAPSHOT",io.insideout.wordlift.org.apache.stanbo
- l.domain;uses:="org.apache.clerezza.rdf.core";version="1.0.0.SNAPSHOT"
+ che.stanbol.entityhub.servicesapi.model,org.apache.stanbol.entityhub.se
+ rvicesapi.query,org.osgi.service.cm,org.apache.stanbol.enhancer.service
+ sapi,org.apache.stanbol.entityhub.model.clerezza";version="1.0.0.SNAPSH
+ OT",io.insideout.wordlift.org.apache.stanbol.services;uses:="io.insideo
+ ut.wordlift.org.apache.stanbol.domain,org.apache.stanbol.enhancer.servi
+ cesapi,org.apache.clerezza.rdf.core";version="1.0.0.SNAPSHOT",io.inside
+ out.wordlift.org.apache.stanbol.domain;uses:="org.apache.clerezza.rdf.c
+ ore";version="1.0.0.SNAPSHOT"
 Import-Package: javax.crypto,javax.crypto.spec,javax.net.ssl,javax.secur
  ity.auth.x500,org.apache.clerezza.rdf.core,org.apache.clerezza.rdf.core
  .access,org.apache.clerezza.rdf.core.impl,org.apache.commons.codec.bina
@@ -43,12 +43,11 @@ Import-Package: javax.crypto,javax.crypto.spec,javax.net.ssl,javax.secur
  sapi.helper;version="0.10.0",org.apache.stanbol.enhancer.servicesapi.im
  pl;version="0.10.0",org.apache.stanbol.enhancer.servicesapi.rdf;version
  ="0.10.0",org.apache.stanbol.entityhub.model.clerezza;version="0.9.0",o
- rg.apache.stanbol.entityhub.servicesapi;version="0.11.0",org.apache.sta
- nbol.entityhub.servicesapi.model;version="0.11.0",org.apache.stanbol.en
- tityhub.servicesapi.model.rdf;version="0.11.0",org.apache.stanbol.entit
- yhub.servicesapi.query;version="0.11.0",org.apache.stanbol.entityhub.se
- rvicesapi.site;version="0.11.0",org.ietf.jgss,org.osgi.service.cm;versi
- on="1.2.0",org.osgi.service.component;version="1.0.0",org.slf4j;version
- ="1.6.1"
+ rg.apache.stanbol.entityhub.servicesapi.model;version="0.11.0",org.apac
+ he.stanbol.entityhub.servicesapi.model.rdf;version="0.11.0",org.apache.
+ stanbol.entityhub.servicesapi.query;version="0.11.0",org.apache.stanbol
+ .entityhub.servicesapi.site;version="0.11.0",org.ietf.jgss,org.osgi.ser
+ vice.cm;version="1.2.0",org.osgi.service.component;version="1.0.0",org.
+ slf4j;version="1.6.1"
 Service-Component: OSGI-INF/serviceComponents.xml
 Tool: Bnd-1.50.0
